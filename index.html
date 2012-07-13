@@ -1,0 +1,201 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html manifest="manifest.appcache">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="keywords" content="numerics,calculator,converter,online,online calculator,works offline, chrome, chrome web store,numerics" >
+        <meta name="description" content="Numerics Calculator is fast and very user-friendly application to make your calculations easier and faster. It is the leading solution on Chrome Web Store for variety of both simple and complex calculations." >
+        <title>Numerics Calculator</title>
+        <link type="text/css" rel="stylesheet" href="css/reset.css" />
+        <link type="text/css" rel="stylesheet" href="css/style.css" />
+        <link type="text/css" rel="stylesheet" href="css/calculator.css" />
+
+          <!--[if IE]>
+            <script type="text/javascript" 
+             src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+
+            <style>
+             .chromeFrameInstallDefaultStyle {
+               width: 100%; /* default is 800px */
+               border: 5px solid blue;
+             }
+            </style>
+            <script>
+
+             window.attachEvent("onload", function() {
+               CFInstall.check({
+                 mode: "inline", 
+                 node: "prompt"
+               });
+             });
+            </script>
+          <![endif]-->
+
+        <link rel="icon" type="image/png" href="caalc.png" />
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" type="text/javascript"></script>
+        <script src="js/caalc.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                init();
+            });
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-26374870-1']);
+            _gaq.push(['_setDomainName', 'numerics.info']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </head>
+
+    <body class="mainbody">
+        
+        <div id="prompt"></div>            
+
+        <div id="header">
+            <a href="index.html" class="numerics-logo"></a>
+            <a  class="header-item active-header-item" href="index.html">calculator</a>
+            <a class="header-item" href="converter.html">converter</a>
+            <a class="header-item" href="scripts.html">scripts</a>
+            <a class="header-item loan-expert-link" title="Easy and powerful loan and mortgage analytics tool (FREE)" href="http://loanexpert.info" target="_blank">loanExpert</a>
+            
+            <div id="menu">
+                <a class="highlight" target="_blank" href="http://calculator.uservoice.com">suggest a feature</a>
+                <a target="_blank" href="http://help.numerics.info/">how to</a>
+                <a href="about.html">about</a>
+            </div>
+        </div>
+
+        <div id="input-box">
+            <span id="inp_l"></span><input id="input" value="0" onclick="this.select()" /><span id="inp_r"></span>
+            <a href="scripts.html" title="Custom functions" id="wrench"></a>
+            <div id="keypad-icon"></div>
+        </div>
+
+        <div id="input-buttons" class="panel">
+            <div class="kp-row">
+                <div class="kp-button" stringToAppend="sin(">sin</div>
+                <div class="kp-button kp-4letters" stringToAppend="asin(">asin</div>
+                <div class="kp-button" stringToAppend="log(">log</div>
+
+
+                <div class="kp-button kp-5letters" stringToAppend="floor(">floor</div>
+                <div class="kp-button kp-5letters" stringToAppend="round(">round</div>
+                <div class="kp-button">%</div>
+
+                <div class="kp-button kp-num">a</div>
+                <div class="kp-button kp-num">b</div>
+                <div class="kp-button kp-num">c</div>
+                <div class="kp-button" stringToAppend="sqrt(">&#8730;x</div>
+
+                <div class="kp-button kp-num">7</div>
+                <div class="kp-button kp-num">8</div>
+                <div class="kp-button kp-num">9</div>
+                
+                <div class="kp-button">+</div>
+                <div class="kp-button kp-back" id="clear-keypad-button">&lt;</div>
+            </div>
+            <div class="kp-row">
+                <div class="kp-button" stringToAppend="cos(">cos</div>
+                <div class="kp-button kp-4letters" stringToAppend="acos(">acos</div>
+                <div class="kp-button" stringToAppend="ln(">ln</div>
+
+                <div class="kp-button kp-4letters" stringToAppend="ceil(">ceil</div>
+                <div class="kp-button" stringToAppend="exp(">exp</div>
+                <div class="kp-button" stringToAppend="!">x!</div>
+
+                <div class="kp-button kp-num">d</div>
+                <div class="kp-button kp-num">e</div>
+                <div class="kp-button kp-num">f</div>
+
+                <div class="kp-button" stringToAppend="^">x<sup style="font-size: 10px;">y</sup></div>
+
+                <div class="kp-button kp-num">4</div>
+                <div class="kp-button kp-num">5</div>
+                <div class="kp-button kp-num">6</div>
+
+                <div class="kp-button">-</div>
+                <div class="kp-button">(</div>
+            </div>
+            <div class="kp-row">
+                <div class="kp-button" stringToAppend="tan(">tan</div>
+                <div class="kp-button kp-4letters" stringToAppend="atan(">atan</div>
+                <div class="kp-button" stringToAppend="lg(">lg</div>
+
+                <div class="kp-button" stringToAppend="max(">max</div>
+                <div class="kp-button" stringToAppend="pow(">pow</div>
+                <div class="kp-button">,</div>
+
+                <div class="kp-button" stringToAppend="bin(">bin</div>
+                <div class="kp-button" stringToAppend="dec(">dec</div>
+                <div class="kp-button kp-4letters" stringToAppend="base(">base</div>
+
+                <div class="kp-button" stringToAppend="mod(">mod</div>
+                
+                <div class="kp-button kp-num">1</div>
+                <div class="kp-button kp-num">2</div>
+                <div class="kp-button kp-num">3</div>
+                <div class="kp-button" stringToAppend="*">&times;</div>
+                <div class="kp-button">)</div>
+            </div>
+
+            <div class="kp-row">
+                <div class="kp-button" stringToAppend="#">deg</div>
+                <div class="kp-button" stringToAppend="pi">&pi;</div>
+                <div class="kp-button">e</div>
+
+                <div class="kp-button" stringToAppend="min(">min</div>
+                <div class="kp-button kp-4letters" stringToAppend="random()">rndm</div>
+                <div class="kp-button" stringToAppend="42">?</div>
+
+                <div class="kp-button" stringToAppend="^2">x<sup style="font-size: 10px;">2</sup></div>
+                <div class="kp-button" stringToAppend="^3">x<sup style="font-size: 10px;">3</sup></div>
+                <div class="kp-button" stringToAppend="10^">10<sup style="font-size: 10px;">x</sup></div>
+
+                <div class="kp-button" stringToAppend="abs(">|x|</div>
+                <div class="kp-button kp-num">00</div>
+                <div class="kp-button kp-num">0</div>
+                <div class="kp-button kp-num">.</div>
+
+                <div class="kp-button" stringToAppend="/">&#247;</div>
+                <div class="kp-button kp-eql">=</div>
+            </div>
+
+
+        </div>
+
+        <div id="history-box" class="panel">
+            <div class="h-placeholder">
+                <p>Your calculations will appear here.</p>
+                <p>You may try typing 2 + 6 * 3 and pressing ENTER to get started.</p>
+            </div>
+            <div class="history-tools">
+                <span id="clean">clean history</span>
+            </div>
+            <ol id="history">
+            </ol>
+        </div>
+
+        <div id="help">
+            <a id="optimax" href="http://optimaxsoftware.com"></a>
+        </div>
+        
+        <div id="bottom-share-links">
+            We are on 
+            <a class="bottom-gplus" title="Add Numerics to you circles to stay updated on it's features. We will also provide you with some useful tips. Stay tuned and don't forget to share it with your friends!"  href="http://plus.google.com/112283747416340188534" target="_blank">Google+</a> and 
+            <a href="http://www.facebook.com/pages/Numerics/208829822537025" title="Like Numerics page to stay updated on it's features. We will also provide you with some useful tips. Stay tuned and don't forget to share it with your friends!" class="bottom-facebook" target="_blank">Facebook</a>
+        </div>
+    </body>
+
+    <script type="text/javascript">
+        document.getElementById("input").focus()
+    </script>
+</html>
+

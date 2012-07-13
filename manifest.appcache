@@ -1,0 +1,52 @@
+CACHE MANIFEST
+# rev 32
+
+NETWORK:
+# resources you never want cached go here
+http://oxcurrency.appspot.com/converter?mode=js
+
+CACHE:
+
+# HTML
+index.html
+converter.html
+scripts.html
+about.html
+
+# images
+img/bg.jpg
+img/caalc.png
+img/dropdown.png
+img/inp-b-bg.jpg
+img/inp-b-r.jpg
+img/inp-b-sep.jpg
+img/input.jpg
+img/inp_l.jpg
+img/inp_l.png
+img/inp_r.jpg
+img/inp_r.png
+img/keyboard.png
+img/numerics-logo.png
+img/optimax.png
+img/uservoice.png
+img/wrench.png
+img/arrows_refresh.png
+
+# JavaScripts
+js/caalc.js
+js/converter.data.js
+js/coonv.js
+js/currency.rates.js
+http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js
+js/jquery.formatCurrency-1.4.0.min_1.js
+js/scripts.js
+js/ace/theme-twilight.js
+js/ace/mode-javascript.js
+js/ace/ace.js
+
+# stylesheets
+css/style.css
+css/calculator.css
+css/reset.css
+css/converter.css
+css/scripts.css

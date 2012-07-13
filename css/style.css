@@ -1,0 +1,329 @@
+root { 
+    display: block;
+}
+
+body {
+    width: 960px;
+    background-color: #191919;
+    margin: 0px auto;
+}
+
+.mainbody {
+    overflow: hidden;
+}
+
+/*
+::selection {
+    background: #F09;
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.398438) 1px 1px 1px;
+}
+*/
+
+#header {
+    font: 12px "Arial", Helvetica, sans;
+    margin: 0px 8px 15px 8px;
+    height: 42px;
+    padding: 0px;
+    border-radius: 5px;
+    background-color: #111;
+    -webkit-box-shadow: 0 1px 3px 1px #000;
+
+    background: #212023; /* Old browsers */
+    background: -moz-linear-gradient(top, #212023 0%, #000000 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#212023), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #212023 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #212023 0%,#000000 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #212023 0%,#000000 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#212023', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #212023 0%,#000000 100%); /* W3C */
+}
+
+#menu {
+    position: absolute;
+    top: 14px;
+    margin-left: 675px;
+}
+
+#menu a {
+    color: #aaa;
+    text-shadow: #000 1px 1px 1px;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+#menu a:hover {
+    color: #fff;
+}
+
+#menu a:active {
+    position: relative;
+    top: 1px;
+}
+
+#input {
+    width: 925px;
+    font: bold 64px "Century Gothic", Helvetica, sans;
+    text-shadow: #999 1px 1px 1px;
+    border: none;
+    background-image: url(../img/input.jpg);
+    padding: 12px;
+    padding-left: 20px;
+    outline: none;
+    height: 124px;
+    display: inline-block;
+    margin-bottom: 15px;
+    vertical-align: top;
+}
+
+#inp_l {
+    display: inline-block;
+    background-image: url(../img/inp_l.jpg);
+    width: 18px;
+    height: 124px;
+    vertical-align: top;
+}
+
+#inp_r {
+    display: inline-block;
+    background-image: url(../img/inp_r.jpg);
+    width: 17px;
+    height: 124px;
+    vertical-align: top;
+}
+
+#inp_b_sep {
+    display: inline-block;
+    background-image: url(../img/inp-b-sep.jpg);
+    width: 20px;
+    height: 124px;
+    vertical-align: top;
+}
+
+#inp_b_r {
+    display: inline-block;
+    background-image: url(../img/inp-b-r.jpg);
+    width: 16px;
+    height: 124px;
+    vertical-align: top;
+}
+
+.scrn {
+    -webkit-box-shadow: 0 1px 5px 1px #000;
+}
+
+h1 {
+    border-bottom: 1px solid #D4D4D4;
+    display: block;
+    font-family: Arial;
+    font-size: 16px;
+    padding-bottom: 3px;
+    text-shadow: #999 1px 1px 1px;
+    margin-bottom: 15px;
+}
+
+#help {
+    margin: 10px 10px;
+    font: 12px Arial;
+    color: #bababa;
+    position: absolute;
+}
+
+#help-content {
+    margin: 15px 0;
+    display: none;
+    font: 13px Arial;
+}
+
+#about-content {
+    margin: 15px 10px;
+    display: none;
+    font: 13px Arial;
+}
+
+#about-content p {
+    line-height: 24px;
+}
+
+.action {
+    font: 13px Arial;
+    color: #fff;
+    text-decoration: none;
+}
+
+.action:hover {
+    text-decoration: underline;
+}
+
+
+#scroll-down {
+    position: relative;
+    float: right;
+    top: -32px;
+    left: -440px;
+    background-image: url(../img/down.png);
+    color: red;
+    text-decoration: underline;
+    text-shadow: #000 1px 1px 2px;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
+#content {
+    text-align: left;
+    font: bold 18px "Century Gothic", Helvetica, sans;
+    
+    border: 2px solid #333;
+    padding: 6px;
+    padding-left: 12px;
+    outline: none;
+    color: white;
+    margin: 0px 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 20px;
+    background-image: url(../img/log.png);
+}
+
+.text a {
+    color: white;
+}
+
+.highlight {
+    background-image:  url(../img/uservoice.png);
+    padding-left: 20px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+}
+
+#wrench {
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 82px;
+    margin-left: 925px;
+    background-image: url(../img/wrench.png);
+    cursor: pointer;
+}
+
+#wrench:active {
+    top: 83px;
+}
+
+#keypad-icon {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 112px;
+    margin-left: 925px;
+    background-image: url(../img/keyboard.png);
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+#keypad-icon:active {
+    top: 113px;
+}
+
+#optimax {
+    display: inline-block;
+    width: 83px;
+    height: 19px;
+    background-image: url(../img/optimax.png);
+    margin-left: 6px;
+}
+
+.numerics-logo {
+    display: inline-block;
+    width: 145px;
+    height: 29px;
+    background-image: url(../img/numerics-logo.png);
+    margin-left: 6px;
+    margin-top: 8px;
+}
+
+.header-item {
+    font: 17px  "Tahoma", Arial, Helvetica, sans-serif;
+    color: #777;
+    text-decoration: none;
+    vertical-align: top;
+    margin-top: 9px;
+    margin-left: 15px;
+    display: inline-block;
+    text-shadow: 1px 1px 1px #333;
+}
+
+.active-header-item {
+    color: #fff;
+    
+}
+
+.header-item:hover {
+    color: #fff;
+}
+
+.recommend  {
+    display: block;
+    font: 13px Arial;
+    color: #fff;
+    text-decoration: none;
+    position: absolute;
+    margin-left: 740px;
+    margin-top: 10px;
+}
+
+.recommend:hover span {
+    color: #fbdd1b;
+}
+
+pre.about-text {
+    font: 12px Arial;
+}
+
+
+.panel {
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #111;
+    -webkit-box-shadow: 0 1px 3px 1px #000;
+    margin: 10px;
+    margin-top: 0px;
+    margin-bottom: 15px;  
+}
+
+.opera-editor {
+    
+    height: 100%;
+    width: 98%;
+    margin-right: 10px;
+
+    color: #F65;
+    background-color: #000;
+    border: 1px solid #333;
+    padding: 10px;
+    font-size: 16px;
+
+    border-radius: 5px;
+
+}
+
+#bottom-share-links {
+    float: right;
+    color: #FFF;
+    text-decoration: none;
+    font: 13px Arial, Helvetica, sans-serif;
+    margin-right: 15px;
+}
+
+#bottom-share-links a {
+    text-decoration: none;
+    color: #FFF;
+    font-weight: bold;
+}
+
+#bottom-share-links a:hover {
+    color: #FFC000;
+}

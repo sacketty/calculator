@@ -1,0 +1,303 @@
+
+
+/* History */
+
+#history-box {
+    text-align: left;
+    height: 60%;
+    overflow: hidden;
+}
+
+#history-box:hover {
+    overflow-y: scroll;
+}
+
+
+#history-box ol li:first-of-type {
+    border-radius: 5px 5px 0 0;
+}
+
+#history-box ol li {
+    background-color: #222;
+    height: 22px;
+    margin: 2px;
+    padding: 10px 6px;
+    color: #fff;
+    font: bold 18px "Century Gothic", Helvetica, sans;
+    text-shadow: #000 2px 2px 2px;
+    width: 900px;
+}
+
+#history-box ol li:hover {
+    background-color: #282828;
+}
+
+#history-box ol li.active {
+    background-color: #202020;
+}
+
+#history-box ol li.active .h-index {
+    background-color: #000;
+    color: #CCC;
+}
+
+#history-box ol li .record {
+    cursor: pointer;
+    float: left;
+}
+
+#history-box ol li .h-index {
+    background-color: #111;
+    width: 28px;
+    display: block;
+    float: left;
+    margin-right: 15px;
+    padding: 6px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    top: -3px;
+}
+
+#history-box ol li .h-actions {
+    display: inline;
+    font: 13px Arial;
+    text-shadow: none;
+    margin: 0 20px;
+}
+
+#history-box ol li .h-action-no-comment {
+    display: none !important;
+    color: #f0fc17 !important;
+} 
+
+#history-box ol li:hover .h-action-no-comment {
+    display: inline-block !important;
+}
+ 
+
+#history-box ol li .h-actions span {
+    margin-right: 15px;
+    color: #fbfebf;
+    cursor: pointer;
+    position: relative;
+    top: -2px;
+    padding-top: 5px;
+    height: 27px;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+#history-box ol li .h-actions span:hover {
+    margin-right: 15px;
+    color: #f7b013 !important;
+    cursor: pointer;
+    position: relative;
+    top: -2px;
+}
+
+#history-box ol li .h-actions span:active {
+    color: #9f6f05 !important;
+}
+
+.h-comment-editor {
+    border: 1px solid #888;
+    background-color: #444;
+    padding: 4px 5px;
+    width: 350px;
+    color: #fff;
+    font: 16px Arial;
+    display: inline-block;
+    margin-top: -4px;
+    margin-right: 15px;
+    outline: none;
+}
+
+.history-tools {
+    position: fixed;
+    margin-top: -10px;
+    margin-left: 800px;
+    border-radius: 0 0 5px 5px;
+    padding: 5px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.h-placeholder {
+    display: none;
+    color: #bbb;
+    font: 16px Arial;
+    text-align: center;
+    line-height: 30px;
+}
+
+.remove-history-record {
+    display: none;
+}
+
+#history-box ol li:hover .remove-history-record {
+    display: inline-block;  
+    cursor: pointer;
+    border: 1px solid #111;
+    float: right;
+    border-radius: 25px;
+    background-color: #111;
+    padding: 0px 5px;
+}
+
+#history-box ol li:hover .remove-history-record:hover {
+    border: 1px solid #333;
+    background-color: #000;
+}
+
+#history-box ol li:hover .remove-history-record:active {
+    border: 1px solid #333;
+    background-color: #000;
+    color: #444;
+}
+
+#clean {
+    color: #fff;
+    font: 12px Arial;
+    cursor: pointer;
+}
+
+#clean:hover {
+    color: #ccc;
+}
+
+#clean:active {
+    color: #888;
+}
+
+
+::-webkit-scrollbar {
+    width: 6px;
+    margin: 6px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    background-color: #555;
+    margin-right: 6px;
+    opacity: 0.8;
+    border-radius: 5px;
+}
+
+/* Keypad */
+
+#input-buttons {
+    display: none;
+}
+
+#input-buttons .kp-button {
+    display: inline-block;
+    vertical-align: top;
+    width: 35px;
+    height: 25px;
+    padding: 10px;
+    margin: 5px 1px;
+    border-radius: 5px;
+    background: #42454a; /* Old browsers */
+    background: -moz-linear-gradient(top, #42454a 0%, #313039 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#42454a), color-stop(100%,#313039)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #42454a 0%,#313039 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #42454a 0%,#313039 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #42454a 0%,#313039 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#42454a', endColorstr='#313039',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #42454a 0%,#313039 100%); /* W3C */
+    -webkit-box-shadow: 0 1px 3px 1px #000;
+    font: 20px "Consolas", "Monaco", monospace;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0px 1px 1px #000;
+    cursor: pointer;
+}
+
+#input-buttons .kp-button:active {
+    -webkit-box-shadow: 0 1px 3px 0px #000;
+    text-shadow: 0px 0px 2px #000;
+    background: #42454a; /* Old browsers */
+    background: -moz-linear-gradient(top, #42454a 0%, #313039 38%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#42454a), color-stop(38%,#313039)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #42454a 0%,#313039 38%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #42454a 0%,#313039 38%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #42454a 0%,#313039 38%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#42454a', endColorstr='#313039',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #42454a 0%,#313039 38%); /* W3C */
+}
+
+#input-buttons .kp-num {
+    background: #5a656b; /* Old browsers */
+    background: -moz-linear-gradient(top, #5a656b 0%, #4a5152 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5a656b), color-stop(100%,#4a5152)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #5a656b 0%,#4a5152 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #5a656b 0%,#4a5152 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #5a656b 0%,#4a5152 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a656b', endColorstr='#4a5152',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #5a656b 0%,#4a5152 100%); /* W3C */
+}
+
+#input-buttons .kp-num:active {
+    background: #5a656b; /* Old browsers */
+    background: -moz-linear-gradient(top, #5a656b 0%, #4a5152 38%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5a656b), color-stop(38%,#4a5152)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #5a656b 0%,#4a5152 38%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #5a656b 0%,#4a5152 38%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #5a656b 0%,#4a5152 38%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a656b', endColorstr='#4a5152',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #5a656b 0%,#4a5152 38%); /* W3C */
+}
+
+#input-buttons .kp-eql {
+    background: #ff9600; /* Old browsers */
+    background: -moz-linear-gradient(top, #ff9600 0%, #9c4100 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff9600), color-stop(100%,#9c4100)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ff9600 0%,#9c4100 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ff9600 0%,#9c4100 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #ff9600 0%,#9c4100 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9600', endColorstr='#9c4100',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #ff9600 0%,#9c4100 100%); /* W3C */
+}
+
+#input-buttons .kp-eql:active {
+    background: #ff9600; /* Old browsers */
+    background: -moz-linear-gradient(top, #ff9600 0%, #9c4100 38%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff9600), color-stop(38%,#9c4100)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ff9600 0%,#9c4100 38%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ff9600 0%,#9c4100 38%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #ff9600 0%,#9c4100 38%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9600', endColorstr='#9c4100',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #ff9600 0%,#9c4100 38%); /* W3C */
+}
+
+#input-buttons .kp-back {
+    background: #426184; /* Old browsers */
+    background: -moz-linear-gradient(top, #426184 0%, #29415a 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#426184), color-stop(100%,#29415a)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #426184 0%,#29415a 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #426184 0%,#29415a 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #426184 0%,#29415a 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#426184', endColorstr='#29415a',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #426184 0%,#29415a 100%); /* W3C */
+}
+
+#input-buttons .kp-back:active {
+    background: #426184; /* Old browsers */
+    background: -moz-linear-gradient(top, #426184 0%, #29415a 38%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#426184), color-stop(38%,#29415a)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #426184 0%,#29415a 38%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #426184 0%,#29415a 38%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #426184 0%,#29415a 38%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#426184', endColorstr='#29415a',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #426184 0%,#29415a 38%); /* W3C */
+}
+
+#input-buttons  .kp-4letters {
+    font: bold 15px "Consolas", "Monaco", monospace !important;
+    padding: 12px 10px 8px 10px;
+}
+
+#input-buttons  .kp-5letters {
+    padding: 12px 12px 8px 8px;
+    font: bold 15px "Consolas", "Monaco", monospace !important;
+}
